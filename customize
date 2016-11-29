@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+#
+# Put customizations to your image in this file.
+
+PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
+
+# Munin plugins
+MUNIN_PLUGINS="
+	apache_accesses
+	apache_processes
+	apache_volume
+"
+
+# Exit if any commands fail
+set -o errexit
+
+
+echo "* Activate munin plugins"
+/opt/core/bin/munin-node-plugins ${MUNIN_PLUGINS}
+
+echo "* Cleaning up."
+rm -rf /root/*
+sm-prepare-image -y

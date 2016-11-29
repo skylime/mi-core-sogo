@@ -1,0 +1,8 @@
+name="core-sogo"
+organization="SkyLime"
+brand="Instance"
+version="16.3.0"
+description="core.io SOGo Server"
+homepage="https://github.com/skylime/mi-core-sogo"
+users="root admin"
+base="1120d2ce-73f8-4d24-816e-45ef4ede2b9a"
