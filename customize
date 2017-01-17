@@ -21,6 +21,9 @@ echo "* Create sogo log directories"
 mkdir -p /var/log/sogo
 chown sogo:sogo /var/log/sogo
 
+echo "* Install sogo-user-import"
+npm install -g sogo-user-import
+
 echo "* Activate munin plugins"
 /opt/core/bin/munin-node-plugins ${MUNIN_PLUGINS}
 
