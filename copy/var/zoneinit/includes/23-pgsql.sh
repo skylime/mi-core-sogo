@@ -10,6 +10,9 @@ chown postgres:postgres ${PGDATA}
 # initdb -- create a new PostgreSQL database cluster
 su postgres -c 'initdb -D /var/pgsql/data/'
 
+# Enable pgsql service
+svcadm enable svc:/pkgsrc/postgresql:default
+
 # Configure SOGo PGSQL user and database
 SOGO_PGSQL_DB='sogo'
 SOGO_PGSQL_PW=${SOGO_PGSQL_PW:-$(mdata-get sogo_pgsql_pw 2>/dev/null)} || \
@@ -18,6 +21,3 @@ mdata-put sogo_pgsql_pw "${SOGO_PGSQL_PW}"
 
 sm-create-db postgresql ${SOGO_PGSQL_DB}
 sm-create-dbuser postgresql ${SOGO_PGSQL_DB} ${SOGO_PGSQL_PW} ${SOGO_PGSQL_DB}
-
-# Enable pgsql service
-svcadm enable svc:/pkgsrc/postgresql:default
