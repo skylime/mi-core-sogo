@@ -7,5 +7,7 @@ http://pkgsrc.smartos.skylime.net/skylime-extra/2016Q4/x86_64/SOGo-3.2.5.tgz
 imapproxy
 memcached
 stunnel
+# grep required to work with sm- commands
+grep
 # Database
 postgresql96
