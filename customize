@@ -14,9 +14,14 @@ MUNIN_PLUGINS="
 # Exit if any commands fail
 set -o errexit
 
+echo "* Remove pgsql folder after installation"
+rm -rf /var/pgsql
 
 echo "* Activate munin plugins"
 /opt/core/bin/munin-node-plugins ${MUNIN_PLUGINS}
+
+echo "* Cleanup home/admin because of delegate dataset usage"
+rm -rf /home/admin/.[^.]*
 
 echo "* Cleaning up."
 rm -rf /root/*

@@ -1,16 +1,16 @@
 {
 	"name":         "core-sogo",
-	"version":      "16.3.0",
+	"version":      "16.4.0",
 	"description":  "core.io SOGo Server",
 	"organization": "SkyLime",
 	"brand":        "Instance",
 	"homepage":     "https://github.com/skylime/mi-core-sogo",
-	"base":         "1120d2ce-73f8-4d24-816e-45ef4ede2b9a",
+	"base":         "d5b95266-4a0c-4404-ba74-d1a293d8704f",
 	"customer_metadata": {
 		"root_authorized_keys": {"type": "text", "description": "SSH public key(s) for the root user"},
 		"syslog_host":          {"type": "text", "description": "syslog server IP address and port seperated by colon"},
 		"submission_addr":      {"type": "text", "description": "hostname for submission smtp server"},
 		"mbox_addr":            {"type": "text", "description": "hostname of imap (and sieve) server"},
-		"sogo_ssl":             {"type": "text", "description": "ssl cert, key and CA for https in pem format"},
+		"sogo_ssl":             {"type": "text", "description": "ssl cert, key and CA for https in pem format"}
 	}
 }
