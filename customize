@@ -17,9 +17,9 @@ set -o errexit
 echo "* Remove pgsql folder after installation"
 rm -rf /var/pgsql
 
-echo "* Create sogo run and log directories"
-mkdir -p /var/{log,run}/sogo
-chown sogo:sogo /var/{log,run}/sogo
+echo "* Create sogo log directories"
+mkdir -p /var/log/sogo
+chown sogo:sogo /var/log/sogo
 
 echo "* Activate munin plugins"
 /opt/core/bin/munin-node-plugins ${MUNIN_PLUGINS}
