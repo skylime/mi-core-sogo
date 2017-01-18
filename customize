@@ -21,8 +21,8 @@ echo "* Remove pgsql folder after installation"
 rm -rf /var/pgsql
 
 echo "* Create sogo log directories"
-mkdir -p /var/log/sogo
-chown sogo:sogo /var/log/sogo
+mkdir -p /var/log/sogo /var/spool/sogo
+chown sogo:sogo /var/log/sogo /var/spool/sogo
 
 echo "* Install sogo-user-import"
 npm install -g sogo-user-import

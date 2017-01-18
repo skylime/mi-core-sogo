@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Import Accounts from Kumquat to SOGo3
+
+PATH=/usr/local/sbin:/usr/local/bin:/opt/local/sbin:/opt/local/bin:/usr/sbin:/usr/bin:/sbin
+
+if mdata-get import_urls 1>/dev/null 2>&1; then
+	for url in $(mdata-get import_urls); do
+		sogo-user-import ${url}
+	done
+fi
