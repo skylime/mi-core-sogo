@@ -4,5 +4,5 @@
 PATH=/usr/local/sbin:/usr/local/bin:/opt/local/sbin:/opt/local/bin:/usr/sbin:/usr/bin:/sbin
 
 if mdata-get import_urls 1>/dev/null 2>&1; then
-	sogo-user-import $(mdata-get import_urls)
+	su sogo -c "sogo-user-import $(mdata-get import_urls)"
 fi

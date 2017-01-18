@@ -44,7 +44,7 @@ WITH (
 );
 __SQL__
 
-CRON="0,5,10,15,20,25,30,35,40,45,55 * * * * su sogo -c '/opt/core/bin/import-cron'"
+CRON="0,5,10,15,20,25,30,35,40,45,55 * * * * /opt/core/bin/import-cron"
 (crontab -l 2>/dev/null || true; echo "$CRON" ) | sort | uniq | crontab
 
 # Enable sogo service
