@@ -4,8 +4,8 @@
 
 # Receive mdata information for sieve, title and superuser
 SIEVE_SERVER=$(mdata-get imap_server 2>/dev/null)
-SOGO_TITLE=$(mdata-get sogo_title 2>/dev/null)
-SOGO_SUPERUSER=$(mdata-get sogo_superuser 2>/dev/null)
+SOGO_TITLE=$(mdata-get sogo_title 2>/dev/null || true)
+SOGO_SUPERUSER=$(mdata-get sogo_superuser 2>/dev/null || true)
 
 # Configure SOGo PGSQL user and database
 SOGO_PGSQL_DB='sogo'
@@ -25,5 +25,5 @@ gsed -i \
 	-e "s/__SOGO_PGSQL_DB__/${SOGO_PGSQL_DB}/" \
 	-e "s/__SIEVE_SERVER__/${SIEVE_SERVER}/" \
 	-e "s/__SOGO_TITLE__/${SOGO_TITLE}/" \
-	-e "s/__SOGO_SUPERUSER__/${SOGO_SUPERUSER}/"
+	-e "s/__SOGO_SUPERUSER__/${SOGO_SUPERUSER}/" \
 	/opt/local/etc/sogo/sogo.conf
