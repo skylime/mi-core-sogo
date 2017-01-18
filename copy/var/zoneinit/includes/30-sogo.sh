@@ -27,3 +27,6 @@ gsed -i \
 	-e "s/__SOGO_TITLE__/${SOGO_TITLE}/" \
 	-e "s/__SOGO_SUPERUSER__/${SOGO_SUPERUSER}/" \
 	/opt/local/etc/sogo/sogo.conf
+
+# Enable sogo service
+svcadm enable svc:/www/sogo:default
