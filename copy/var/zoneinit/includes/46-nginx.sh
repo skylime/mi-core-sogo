@@ -4,7 +4,7 @@ HOST=$(hostname)
 NGINX_HOME='/opt/local/etc/nginx/'
 
 # Config hostname in nginx config
-gsed -i "s:server_name.*;:server_name ${HOST};:g" \
+gsed -i "s:__HOSTNAME__:${HOST}:g" \
 	${NGINX_HOME}nginx.conf
 
 # SSL
