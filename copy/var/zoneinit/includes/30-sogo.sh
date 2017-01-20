@@ -47,5 +47,8 @@ __SQL__
 CRON="0,5,10,15,20,25,30,35,40,45,55 * * * * /opt/core/bin/import-cron"
 (crontab -l 2>/dev/null || true; echo "$CRON" ) | sort | uniq | crontab
 
+# Use logadm for rotate the logfiles
+logadm -w /var/log/sogo/sogo.log -p 1d -C 10 -N -m 640 -c
+
 # Enable sogo service
 svcadm enable svc:/www/sogo:default
