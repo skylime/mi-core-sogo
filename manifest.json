@@ -27,6 +27,6 @@
 		"sogo_ssl":             {"type": "text", "description": "ssl certificate in pem format (certificate, key and certificate chain)"},
 		"sogo_title":           {"type": "text", "description": "title of the SOGo web interface"},
 		"sogo_superuser":       {"type": "text", "description": "email address of the SOGo admin user"},
-		"sogo_groupware":       {"type": "boolean", "description": "value if groupware features are enabled, default is false"}
+		"sogo_groupware":       {"type": "bool", "description": "value if groupware features are enabled, default is false"}
 	}
 }
