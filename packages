@@ -9,7 +9,5 @@ memcached
 stunnel
 # nodejs for sogo-user-import
 nodejs
-# grep required to work with sm- commands
-grep
 # Database
 postgresql96

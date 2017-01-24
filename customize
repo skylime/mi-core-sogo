@@ -6,9 +6,8 @@ PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 
 # Munin plugins
 MUNIN_PLUGINS="
-	apache_accesses
-	apache_processes
-	apache_volume
+	nginx_request
+	nginx_status
 "
 
 # Exit if any commands fail
