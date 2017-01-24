@@ -17,7 +17,8 @@ GroupDAV, as well as Microsoft ActiveSync.
 ## mdata variables
 
 - `import_urls` `[*]`: list of urls that provide a json dump of mail accounts and
-  aliases. The format is described below.
+  aliases. The format is described in the
+  [core-mailapi](https://github.com/skylime/mi-core-mailapi#legacy-json-import-format).
 - `smtp_server` `[*]`: hostname of the smtp server, requires tls support by default
 - `imap_server` `[*]`: hostname of the imap and sieve server, requires tls support
 - `sogo_ssl`: ssl certificate in pem format (certificate, key and certificate chain)
