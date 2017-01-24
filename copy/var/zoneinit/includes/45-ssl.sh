@@ -13,9 +13,11 @@ if mdata-get sogo_ssl 1>/dev/null 2>&1; then
 	mdata-get sogo_ssl > "${SSL_HOME}/nginx.pem"
 else
 	# Try to generate let's encrypt ssl certificate for the hostname
-	if /opt/core/bin/ssl-letsencrypt.sh 1>/dev/null 2>&1; then
+	/opt/core/bin/ssl-letsencrypt.sh
+	# If folder doesn't exists we don't have any ssl certificate
+	LE_LIVE="/opt/local/etc/letsencrypt/live/$(hostname)/"
+	if [[ -d "${LE_LIVE}" ]] 1>/dev/null 2>&1; then
 		# Workaround to link correct files for SSL_HOME
-		LE_LIVE="/opt/local/etc/letsencrypt/live/$(hostname)/"
 		ln -s ${LE_LIVE}/fullchain.pem ${SSL_HOME}/nginx.crt
 		ln -s ${LE_LIVE}/privkey.pem ${SSL_HOME}/nginx.key
 	else
