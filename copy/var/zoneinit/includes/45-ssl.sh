@@ -11,12 +11,14 @@ mkdir -p "${SSL_HOME}"
 # Use user certificate if provided
 if mdata-get sogo_ssl 1>/dev/null 2>&1; then
 	mdata-get sogo_ssl > "${SSL_HOME}/nginx.pem"
+	# Split files for nginx usage
+	openssl pkey -in "${SSL_HOME}/nginx.pem" -out "${SSL_HOME}/nginx.key"
+	openssl crl2pkcs7 -nocrl -certfile "${SSL_HOME}/nginx.pem" | \
+		openssl pkcs7 -print_certs -out "${SSL_HOME}/nginx.crt"
 else
 	# Try to generate let's encrypt ssl certificate for the hostname
-	/opt/core/bin/ssl-letsencrypt.sh
-	# If folder doesn't exists we don't have any ssl certificate
-	LE_LIVE="/opt/local/etc/letsencrypt/live/$(hostname)/"
-	if [[ -d "${LE_LIVE}" ]] 1>/dev/null 2>&1; then
+	if /opt/core/bin/ssl-letsencrypt.sh 1>/dev/null; then
+		LE_LIVE="/opt/local/etc/letsencrypt/live/$(hostname)/"
 		# Workaround to link correct files for SSL_HOME
 		ln -s ${LE_LIVE}/fullchain.pem ${SSL_HOME}/nginx.crt
 		ln -s ${LE_LIVE}/privkey.pem ${SSL_HOME}/nginx.key
