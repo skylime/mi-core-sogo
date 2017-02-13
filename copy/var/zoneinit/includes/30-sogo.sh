@@ -3,7 +3,8 @@
 # and setup title and all information provided by mdata
 
 # Receive mdata information for sieve, title and superuser
-SIEVE_SERVER=$(mdata-get imap_server 2>/dev/null)
+SIEVE_SERVER=${SIEVE_SERVER:-$(mdata-get sieve_server 2>/dev/null)} || \
+	SIEVE_SERVER=$(mdata-get imap_server 2>/dev/null);
 SOGO_TITLE=$(mdata-get sogo_title 2>/dev/null || true)
 SOGO_SUPERUSER=$(mdata-get sogo_superuser 2>/dev/null || true)
 

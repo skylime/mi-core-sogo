@@ -23,6 +23,7 @@
 		"import_urls":          {"type": "text", "description": "list of urls that provide a json dump of mail accounts and aliases"},
 		"smtp_server":          {"type": "text", "description": "hostname of the smtp server, requires tls support by default"},
 		"imap_server":          {"type": "text", "description": "hostname of the imap and sieve server, requires tls support"},
+		"sieve_server":         {"type": "text", "description": "hostname of the sieve server, requires tls support by default"},
 		"sogo_ssl":             {"type": "text", "description": "ssl certificate in pem format (certificate, key and certificate chain)"},
 		"sogo_title":           {"type": "text", "description": "title of the SOGo web interface"},
 		"sogo_superuser":       {"type": "text", "description": "email address of the SOGo admin user"},

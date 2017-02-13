@@ -21,6 +21,7 @@ GroupDAV, as well as Microsoft ActiveSync.
   [core-mailapi](https://github.com/skylime/mi-core-mailapi#legacy-json-import-format).
 - `smtp_server` `[*]`: hostname of the smtp server, requires tls support by default
 - `imap_server` `[*]`: hostname of the imap and sieve server, requires tls support
+- `sieve_server`: hostname of the sieve server, requires tls support by default
 - `sogo_ssl`: ssl certificate in pem format (certificate, key and certificate chain)
 - `sogo_title`: title of the SOGo web interface
 - `sogo_superuser`: email address of the SOGo admin user
