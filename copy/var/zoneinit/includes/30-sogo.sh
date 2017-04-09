@@ -16,6 +16,20 @@ SOGO_PGSQL_PW=${SOGO_PGSQL_PW:-$(mdata-get sogo_pgsql_pw 2>/dev/null)} || \
 
 mdata-put sogo_pgsql_pw "${SOGO_PGSQL_PW}"
 
+log "waiting for the socket to show up"
+COUNT="0";
+while ! ls /tmp/.s.PGSQL.* >/dev/null 2>&1; do
+	sleep 1
+	((COUNT=COUNT+1))
+	if [[ $COUNT -eq 60 ]]; then
+		log "ERROR Could not talk to PGSQL after 60 seconds"
+		ERROR=yes
+		break 1
+	fi
+done
+[[ -n "${ERROR}" ]] && exit 31
+log "(it took ${COUNT} seconds to start properly)"
+
 if ! psql -lqt -U ${SOGO_PGSQL_USER} | cut -d \| -f 1 | grep -qw ${SOGO_PGSQL_DB} 2>/dev/null; then
 	sm-create-db postgresql ${SOGO_PGSQL_DB}
 	sm-create-dbuser postgresql ${SOGO_PGSQL_USER} ${SOGO_PGSQL_PW} ${SOGO_PGSQL_DB}
