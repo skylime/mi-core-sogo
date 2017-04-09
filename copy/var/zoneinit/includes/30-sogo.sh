@@ -16,8 +16,10 @@ SOGO_PGSQL_PW=${SOGO_PGSQL_PW:-$(mdata-get sogo_pgsql_pw 2>/dev/null)} || \
 
 mdata-put sogo_pgsql_pw "${SOGO_PGSQL_PW}"
 
-sm-create-db postgresql ${SOGO_PGSQL_DB}
-sm-create-dbuser postgresql ${SOGO_PGSQL_USER} ${SOGO_PGSQL_PW} ${SOGO_PGSQL_DB}
+if ! psql -lqt -U ${SOGO_PGSQL_USER} | cut -d \| -f 1 | grep -qw ${SOGO_PGSQL_DB} 2>/dev/null; then
+	sm-create-db postgresql ${SOGO_PGSQL_DB}
+	sm-create-dbuser postgresql ${SOGO_PGSQL_USER} ${SOGO_PGSQL_PW} ${SOGO_PGSQL_DB}
+fi
 
 # Search and replace configuration template
 gsed -i \
