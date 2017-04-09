@@ -1,5 +1,12 @@
 # Changelog
 
+## 16.4.2
+
+### Fix
+
+* Add check for PGSQL Socket. [Thomas Merkel]
+* Fix if sogo database already exists. [Thomas Merkel]
+
 ## 16.4.1
 
 ### New

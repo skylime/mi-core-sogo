@@ -1,7 +1,7 @@
 name="core-sogo"
 organization="SkyLime"
 brand="Instance"
-version="16.4.1"
+version="16.4.2"
 description="core.io SOGo Server"
 homepage="https://github.com/skylime/mi-core-sogo"
 users="root admin"
