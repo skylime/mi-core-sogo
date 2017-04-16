@@ -1,5 +1,11 @@
 # Changelog
 
+## 16.4.3
+
+### Fix
+
+* Fix startup of pgsql and setup. [Thomas Merkel]
+
 ## 16.4.2
 
 ### Fix
