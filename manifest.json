@@ -1,6 +1,6 @@
 {
 	"name":         "core-sogo",
-	"version":      "16.4.2",
+	"version":      "16.4.3",
 	"description":  "core.io SOGo Server",
 	"organization": "SkyLime",
 	"brand":        "Instance",
