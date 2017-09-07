@@ -1,13 +1,12 @@
 nginx
 # SOGo
-http://pkgsrc.smartos.skylime.net/skylime-extra/2016Q4/x86_64/gnustep-base-1.24.0nb14.tgz
-http://pkgsrc.smartos.skylime.net/skylime-extra/2016Q4/x86_64/SOPE-2.3.14nb3.tgz
-http://pkgsrc.smartos.skylime.net/skylime-extra/2016Q4/x86_64/SOGo-3.2.5.tgz
+https://pkgsrc.smartos.skylime.net/skylime-extra/2017Q2/x86_64/SOPE-2.3.20nb1.tgz
+https://pkgsrc.smartos.skylime.net/skylime-extra/2017Q2/x86_64/SOGo-3.2.9.tgz
 # Caching and proxy
 imapproxy
 memcached
 stunnel
 # nodejs for sogo-user-import
-nodejs
+nodejs-6.11.0
 # Database
 postgresql96
