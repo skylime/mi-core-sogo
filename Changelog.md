@@ -1,5 +1,15 @@
 # Changelog
 
+## 17.2.0
+
+### New
+
+- Version bump to 17.2.0 (core-base) [Thomas Merkel]
+- Switch to SOGo version 3.2.9. [Thomas Merkel]
+
+  Use own SOPE package which require pgsql96
+  Force nodejs to 6.11.0
+
 ## 16.4.3
 
 ### Fix
