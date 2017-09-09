@@ -1,5 +1,11 @@
 # Changelog
 
+## 17.2.1
+
+### Fix
+
+- Fix sogo-user-import timeout issue. [Thomas Merkel]
+
 ## 17.2.0
 
 ### New
