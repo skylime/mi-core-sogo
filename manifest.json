@@ -1,11 +1,11 @@
 {
 	"name":         "core-sogo",
-	"version":      "17.2.1",
+	"version":      "17.4.0",
 	"description":  "core.io SOGo Server",
 	"organization": "SkyLime",
 	"brand":        "Instance",
 	"homepage":     "https://github.com/skylime/mi-core-sogo",
-	"base":         "74f34a35-51fa-4a99-a087-04beda1ef831",
+	"base":         "cc4c5e60-6104-4b4a-8e0d-4c4213984468",
 	"customer_metadata": {
 		"admin_authorized_keys": {"type": "text", "description": "SSH public authorized key(s) for the admin user"},
 		"root_authorized_keys": {"type": "text", "description": "SSH public authorized key(s) for the root user"},

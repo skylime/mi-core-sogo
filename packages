@@ -1,12 +1,12 @@
 nginx
 # SOGo
-https://pkgsrc.smartos.skylime.net/skylime-extra/2017Q2/x86_64/SOPE-2.3.20nb1.tgz
-https://pkgsrc.smartos.skylime.net/skylime-extra/2017Q2/x86_64/SOGo-3.2.9.tgz
+SOPE
+SOGo
 # Caching and proxy
 imapproxy
 memcached
 stunnel
 # nodejs for sogo-user-import
-nodejs-6.11.0
+nodejs-6.12.2
 # Database
 postgresql96
