@@ -54,7 +54,7 @@ fi
 # Search and replace configuration template
 gsed -i \
 	-e "s/__SOGO_PGSQL_USER__/${SOGO_PGSQL_USER}/" \
-	-e "s/__SOGO_PGSQL_PW__/${SOGO_PGSQL_USER}/" \
+	-e "s/__SOGO_PGSQL_PW__/${SOGO_PGSQL_PW}/" \
 	-e "s/__SOGO_PGSQL_DB__/${SOGO_PGSQL_DB}/" \
 	-e "s/__SIEVE_SERVER__/${SIEVE_SERVER}/" \
 	-e "s/__SOGO_TITLE__/${SOGO_TITLE}/" \
