@@ -46,4 +46,4 @@ Please follow these steps to backup and restore the SOGo database files.
 
 8. Start SOGo and verify everything working as expected.
 
-	svcadm start sogo
+	svcadm enable sogo
