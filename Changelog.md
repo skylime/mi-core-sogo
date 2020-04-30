@@ -1,5 +1,22 @@
 # Changelog
 
+## 20.1.0
+
+### New
+
+* Upgrade SOGo to version 4 and PostgreSQL 9.6 to 11. [Thomas Merkel]
+
+  Migrate to new PostgreSQL version and to new SOGo version. It require a
+  manual upgrade of the database structure and schema. Please look at the
+  docs/sogo-upgrade-to-pgsql-11.md guide before running any re-provision.
+
+* Enable Vacation support by default. [Thomas Merkel]
+
+### Fix
+
+* Fix sogo_pgsql_pw information and configuration. [Thomas Merkel]
+* Fix IPv6 listening for SOGo. [Thomas Merkel]
+
 ## 17.2.1
 
 ### Fix
