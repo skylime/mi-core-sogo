@@ -1,5 +1,19 @@
 # Changelog
 
+## 23.4.0
+
+### New
+
+* SOGo 5.11.1 and PostgreSQL 14 upgrade. [Thomas Merkel]
+
+  * Upgrade to latest SOGo Version 5.11.1 to hopefully fix the memory leak
+    issue in older versions.
+  * Switch to different imapproxy software, which is only able to listen
+    on IPv4. Which require a modification of sogo.conf.
+  * New PostgreSQL version 14 which require a manual update step with a
+    database dump. See docs/ folder.
+
+
 ## 20.1.0
 
 ### New
