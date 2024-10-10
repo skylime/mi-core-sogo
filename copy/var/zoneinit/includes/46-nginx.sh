@@ -4,7 +4,7 @@
 # Defaults
 HOST=$(hostname)
 NGINX_HOME='/opt/local/etc/nginx/'
-SSL_HOME=${NGINX_HOME}'ssl/'
+SSL_HOME='/opt/local/etc/nginx/ssl/'
 SVC_NAME='svc:/pkgsrc/nginx:default'
 
 # Create folder if it doesn't exists
