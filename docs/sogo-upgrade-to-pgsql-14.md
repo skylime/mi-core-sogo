@@ -13,9 +13,10 @@ Please follow these steps to backup, restore and upgrade your SOGo database sche
   su - sogo
   pg_dump > /var/pgsql/backup/dump.sql
 
-3. Stop PostgreSQL and delete the complete databases.
+3. Stop PostgreSQL, create snapshot and delete the complete databases.
 
   svcadm disable postgresql
+  zfs snapshot zfs snapshot zones/$(mdata-get sdc:uuid)/data/pgsql@migrate-to-pgsql14
   rm -rf /var/pgsql/data
 
 4. Reprovision with the latest image contains PostgreSQL version 14. If a dump.sql file exists in the backup folder no SOGo service will start!
