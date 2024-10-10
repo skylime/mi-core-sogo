@@ -85,6 +85,6 @@ if [ -f "/var/pgsql/backup/dump.sql" ]; then
  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 EOF
 else
-    log "Enable matrix synapse service"
+    log "Enable sogo service"
     svcadm enable svc:/www/sogo:default
 fi
