@@ -1,14 +1,15 @@
 nginx
 # SOGo
-https://pkgsrc.smartos.skylime.net/skylime-extra/2020Q1/x86_64/gnustep-base-1.26.0.tgz
-https://pkgsrc.smartos.skylime.net/skylime-extra/2020Q1/x86_64/SOPE-4.3.0.tgz
-https://pkgsrc.smartos.skylime.net/skylime-extra/2020Q1/x86_64/SOGo-4.3.0.tgz
+https://packages.pkgsrc.pub/skylime-extra/SmartOS/2023Q4/x86_64/gnustep-base-1.29.0nb3.tgz
+https://packages.pkgsrc.pub/skylime-extra/SmartOS/2023Q4/x86_64/gnustep-make-2.8.0nb1.tgz
+https://packages.pkgsrc.pub/skylime-extra/SmartOS/2023Q4/x86_64/gnustep-objc-1.8.1.tgz
+https://packages.pkgsrc.pub/skylime-extra/SmartOS/2023Q4/x86_64/SOPE-5.11.1.tgz
+https://packages.pkgsrc.pub/skylime-extra/SmartOS/2023Q4/x86_64/SOGo-5.11.1.tgz
 # Caching and proxy
-https://pkgsrc.smartos.skylime.net/skylime-extra/2020Q1/x86_64/up-imapproxy-1.2.8.tgz
+up-imapproxy
 memcached
 stunnel
 # nodejs for sogo-user-import
 nodejs
-npm
 # Database
-postgresql11
+postgresql14
